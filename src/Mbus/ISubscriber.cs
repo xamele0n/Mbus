@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Mbus
 {
-    public class Class1
+    public interface ISubscriber
     {
+        IDisposable Subscribe<TEventArgs>(AsyncEventHandler<TEventArgs> handler);
     }
 }
